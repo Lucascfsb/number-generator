@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Sorteador de números</title>
+  </head>
+
+  <body>
+    <img src="/assets/icons.svg"/>
+
+    <main>
+      <aside class="aside-header">
+        <header>
+          <h4>ONLINE - GRATUITO</h4>
+          <h1>SORTEDOR DE NÚMEROS</h1>
+        </header>
+
+        <strong>Como funciona o sorteador de números?</strong>
+        <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+
+        <strong>Posso escolher o intervalo dos números?</strong>
+        <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+      </aside>
+      
+      <form class="form">
+        <header>
+          <h3>QUERO SORTEAR:</h3>
+          <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+        </header>
+
+        <fieldset>
+          <label for="number">NÚMEROS</label>
+          <input type="text" id="number" name="number" />
+
+          <label for="firstInterval">DE</label>
+          <input type="text" id="firstInterval" name="firstInterval" />
+
+          <label for="secondInterval">ATÉ</label>
+          <input type="text" id="secondInterval" name="secondInterval" />
+
+          <input type="toggle" id="noRepetition" name="noRepetition" />
+          <label for="noRepetition">Não repetir números</label>
+        </fieldset>
+
+        <button type="submit">Sortear<img/></button>
+      </form>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
