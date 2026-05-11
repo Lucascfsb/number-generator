@@ -35,6 +35,7 @@
     #d586e0 65.79%,
     #91a1fa 84.58%
   );
+
   --gradient-background: linear-gradient(135deg, #d586e0 0%, #91a1fa 98.93%);
   --gradient-content: linear-gradient(90deg, #c7c9cc 0%, #3d3d3d 100%);
 
@@ -42,14 +43,18 @@
   --font-family-sora: "Sora", sans-serif;
   --font-family-mono: "Roboto Mono", monospace;
   --font-family-flex: "Roboto Flex", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
 
   /* Sora - Display (ExtraBold: 800 / Bold: 700) */
   --display-large: 800 72px/130% var(--font-family-sora);
   --display-medium: 800 40px/130% var(--font-family-sora);
   --display-small: 700 32px/130% var(--font-family-sora);
 
-  /* Roboto Mono - Overline (Bold: 700) */
-  --overline: 700 16px/150% var(--font-family-mono);
+  /* Roboto Mono - Overline (Regular: 500) */
+  --overline: 500 16px/150% var(--font-family-mono);
+
+  /* Inter - Label (Medium: 500) */
+  --inter-mono: 500 12px/150% var(--font-family-inter);
 
   /* Roboto Flex - Paragraph & Label (Bold: 700 / Medium: 500) */
   --paragraph-large: 500 16px/150% var(--font-family-flex);
@@ -196,7 +201,7 @@ form {
         height: 56px;
         width: 86px;
         background: var(--background-secondary);
-        border: 1px solid var(--background-tertiary);
+        border: none;
         border-radius: 8px;
         color: var(--content-primary);
       }
@@ -207,7 +212,6 @@ form {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-top: 20px;
       cursor: pointer;
       margin-bottom: 40px;
 
@@ -240,7 +244,7 @@ form {
     }
 
     & .toggle input:checked + .toggle-track {
-      background: var(--background-brand);
+      background: var(--gradient-background);
     }
 
     & .toggle input:checked + .toggle-track::after {
@@ -248,7 +252,7 @@ form {
     }
 
     & .toggle-text {
-      font: var(--label-small);
+      font: var(--inter-mono);
       color: var(--content-secondary);
     }
   }
@@ -265,6 +269,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  border: none;
 
   & i {
     line-height: 1;
