@@ -73,18 +73,27 @@
           fácil!</p>
       </header>
 
-      <fieldset>
-        <label for="number">NÚMEROS</label>
-        <input type="text" id="number" name="number" />
+      <fieldset class="draw-fields">
+        <div class="field">
+          <label for="number">NÚMEROS</label>
+          <input type="text" id="number" name="number" />
+        </div>
 
-        <label for="firstInterval">DE</label>
-        <input type="text" id="firstInterval" name="firstInterval" />
+        <div class="field">
+          <label for="firstInterval">DE</label>
+          <input type="text" id="firstInterval" name="firstInterval" />
+        </div>
 
-        <label for="secondInterval">ATÉ</label>
-        <input type="text" id="secondInterval" name="secondInterval" />
+        <div class="field">
+          <label for="secondInterval">ATÉ</label>
+          <input type="text" id="secondInterval" name="secondInterval" />
+        </div>
 
-        <input type="toggle" id="noRepetition" name="noRepetition" />
-        <label for="noRepetition">Não repetir números</label>
+        <label class="toggle">
+          <input type="checkbox" id="noRepetition" name="noRepetition" />
+          <span class="toggle-track"></span>
+          <span class="toggle-text">Não repetir números</span>
+        </label>
       </fieldset>
 
       <button type="submit">
