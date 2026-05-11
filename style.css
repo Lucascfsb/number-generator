@@ -61,18 +61,25 @@
 
 body {
   background-color: var(--background-primary);
-  background-image:    url("./assets/Shapes.png");
-
+  background-image: url("./assets/Shapes.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
   & img {
     padding: 76px 1074px 89px 120px;
   }
 }
 
 main {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: start;
-  padding: 0 134px 153px 134px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px red;
+  width: 100%;
+  max-width: 1098px;
+  gap: 108px;
 }
 
 img {
@@ -82,6 +89,8 @@ img {
 .aside-header {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  flex: 1;
 
   & header {
     & h4 {
@@ -107,9 +116,16 @@ main strong {
 main p {
   color: var(--content-secondary);
   font: var(--paragraph-small);
-}
+} 
 
 form {
+  display: flex;
+  flex-direction: column; 
+  border: solid 2px yellow;
+  width: 100%;
+  max-width: 482px;
+  flex: 1;
+
   & header{
     & h3 {
       font: var(--label-medium);
@@ -121,4 +137,8 @@ form {
       color: var(--content-secondary);
     }
   }
+}
+
+button{
+  width: 100%;
 }
