@@ -67,7 +67,7 @@
     </aside>
 
     <form class="form">
-      <header>
+      <header class="">
         <h3>QUERO SORTEAR:</h3>
         <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e
           fácil!</p>
@@ -96,9 +96,21 @@
         </label>
       </fieldset>
 
+      <header class="results hidden">
+        <h3>RESULTADO DO SORTEIO</h3>
+        <h4>1º RESULTADO</h4>
+      </header>
+
+      <ul class="results-values hidden" aria-live="polite">
+        <li class="roll-item"><output>23</output></li>
+        <li><output>12</output></li>
+      </ul>
+
       <button type="submit">
-        SORTEAR
-        <i class="hgi hgi-stroke hgi-rounded hgi-arrow-right-02"></i>
+        <span>
+          SORTEAR
+          <i class="hgi hgi-stroke hgi-rounded hgi-arrow-right-02"></i>
+        </span>
       </button>
     </form>
   </main>
