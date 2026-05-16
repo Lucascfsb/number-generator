@@ -19,9 +19,9 @@
 </head>
 
 <body>
-  <img src="/assets/icons.svg" />
-  <i class="hgi hgi-stroke hgi-rounded hgi-replay"></i>
-  <i class="hgi hgi-stroke hgi-rounded hgi-arrow-right-02"></i>
+  <img src="/assets/icons.svg" alt="Logo" aria-hidden="true" />
+  <i class="hgi hgi-stroke hgi-rounded hgi-replay" aria-hidden="true"></i>
+  <i class="hgi hgi-stroke hgi-rounded hgi-arrow-right-02" aria-hidden="true"></i>
 
   <main>
     <aside class="aside-header">
@@ -67,7 +67,7 @@
     </aside>
 
     <form class="form">
-      <header class="">
+      <header>
         <h3>QUERO SORTEAR:</h3>
         <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e
           fácil!</p>
@@ -76,21 +76,21 @@
       <fieldset class="draw-fields">
         <div class="field">
           <label for="number">NÚMEROS</label>
-          <input type="text" id="number" name="number" />
+          <input type="number" id="number" name="number" min="1" />
         </div>
 
         <div class="field">
           <label for="firstInterval">DE</label>
-          <input type="text" id="firstInterval" name="firstInterval" />
+          <input type="number" id="firstInterval" name="firstInterval" />
         </div>
 
         <div class="field">
           <label for="secondInterval">ATÉ</label>
-          <input type="text" id="secondInterval" name="secondInterval" />
+          <input type="number" id="secondInterval" name="secondInterval" />
         </div>
 
         <label class="toggle">
-          <input type="checkbox" id="noRepetition" name="noRepetition" />
+          <input type="checkbox" id="noRepetitionToggle" name="noRepetition" />
           <span class="toggle-track"></span>
           <span class="toggle-text">Não repetir números</span>
         </label>
@@ -101,15 +101,31 @@
         <h4>1º RESULTADO</h4>
       </header>
 
-      <ul class="results-values hidden" aria-live="polite">
+      <ul class="results-values hidden" aria-live="polite" aria-atomic="true">
         <li class="roll-item"><output>23</output></li>
-        <li><output>12</output></li>
+        <li class="roll-item"><output>12</output></li>
       </ul>
 
       <button type="submit">
-        <span>
+        <span class="toDraw">
           SORTEAR
           <i class="hgi hgi-stroke hgi-rounded hgi-arrow-right-02"></i>
+        </span>
+
+        <span class="toDrawAgain hidden">
+          SORTEAR NOVAMENTE
+          <span class="svg-stack">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="playAnimation">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.75 1.5C5.64136 1.5 1.5 5.64136 1.5 10.75C1.5 15.8586 5.64137 20 10.75 20C15.8586 20 20 15.8586 20 10.75C20 10.3358 20.3358 10 20.75 10C21.1642 10 21.5 10.3358 21.5 10.75C21.5 16.687 16.687 21.5 10.75 21.5C4.81293 21.5 0 16.687 0 10.75C0 4.81294 4.81294 0 10.75 0C13.5437 0 16.089 1.06639 18 2.81269V1.25C18 0.835786 18.3358 0.5 18.75 0.5C19.1642 0.5 19.5 0.835786 19.5 1.25V4.75C19.5 5.16421 19.1642 5.5 18.75 5.5H15.25C14.8358 5.5 14.5 5.16421 14.5 4.75C14.5 4.33579 14.8358 4 15.25 4H17.0746C15.4199 2.44872 13.196 1.5 10.75 1.5Z"
+                fill="white" />
+            </svg>
+            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.6953 4.64481C7.5186 5.27151 6.6833 5.71441 5.0129 6.60021C3.398 7.45641 2.5906 7.88461 1.9399 7.71251C1.6709 7.64131 1.4258 7.50621 1.22812 7.32001C0.75 6.86981 0.75 5.99651 0.75 4.25001C0.75 2.50341 0.75 1.63018 1.22812 1.17995C1.4258 0.993809 1.6709 0.858678 1.9399 0.787528C2.5906 0.615438 3.398 1.04357 5.0129 1.89983C6.6833 2.78561 7.5186 3.22851 7.6953 3.85521C7.7682 4.11391 7.7682 4.38611 7.6953 4.64481Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
         </span>
       </button>
     </form>
