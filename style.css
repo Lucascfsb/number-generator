@@ -513,8 +513,8 @@ input[type="number"] {
   }
   100% {
     transform: scale(1) rotate(360deg);
-    background: transparent;
     color: var(--content-brand);
+    opacity: 1;
   }
 }
 
